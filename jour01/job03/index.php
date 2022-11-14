@@ -11,15 +11,12 @@ $int2 = 42;
 
 $float1 = 1.7;
 $float2 = 99.9;
-?>
 
 
-<!DOCTYPE html>
-<html lang="en">
+
+echo "<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
@@ -35,24 +32,25 @@ $float2 = 99.9;
             <tr>
                 <td>Boolean</td>
                 <td>boolean1</td>
-                <td><?php echo $boolean1 ?></td>
+                <td>$boolean1</td>
             </tr>
             <tr>
                 <td>String</td>
                 <td>string1</td>
-                <td><?php echo $string1 ?></td>
+                <td>$string1</td>
             </tr>
             <tr>
                 <td>Integer</td>
                 <td>int1</td>
-                <td><?php echo $int1 ?></td>
+                <td>$int1</td>
             </tr>
             <tr>
                 <td>Float</td>
                 <td>float1</td>
-                <td><?php echo $float1 ?></td>
+                <td>$float1</td>
             </tr>
         </tbody>
     </table>
 </body>
 </html>
+";
