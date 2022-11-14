@@ -12,9 +12,8 @@ echo '<br>';
 
 echo "$str2 $str $str3";
 
-
-
 echo '<br><br>';
+
 
 // ints
 
@@ -27,3 +26,19 @@ echo '<br>';
 $val = $val + 4;
 
 echo $val;
+
+echo '<br><br>';
+
+
+// booleans
+
+$myBool = true;
+
+echo $myBool;
+
+echo '<br>';
+
+$myBool = false;
+
+// false ne s'affiche pas dans le navigateur
+echo $myBool;
