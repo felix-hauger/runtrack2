@@ -15,7 +15,7 @@ for ($i = 1; $i <= 1000; $i++) {
         $j++;
     }
 
-    // Si la boucle s'est terminée sans encombre il n'a pas d'autres multiples ; par conséquent il n'est que divisible par lui même
+    // Si la boucle s'est terminée sans encombre $j est égal à $i ; $i n'a pas d'autres multiples ; par conséquent il n'est que divisible par lui même
     if ($j === $i) {
 
         // Pour éliminer les nombres décimaux
