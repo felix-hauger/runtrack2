@@ -21,7 +21,7 @@ $strModified = '';
 
 $strSize = 0;
 
-// Récupère la taille de la string
+// On récupère la taille de la string
 while (isset($str[$strSize])) {
     $strSize += 1;
 }
@@ -34,7 +34,7 @@ for ($i = 1; $i < $strSize; $i++) {
 // ... puis on place le premier à la fin de la chaîne
 $strModified[$strSize-1] = $str[0];
 
-// La chaîne est maintenant décalée vers la gauche !
+// La chaîne est maintenant décalée vers la gauche, avec l'ancien premier caractère à la fin !
 
 // Pour toutes les lettres de l'alphabet
 for ($i = 0; $i < 26; $i++) {
