@@ -1,13 +1,11 @@
-<!-- Job 07
+<!--
+Job 07
 Créez une variable de type string nommée $str et affectez y le texte :
 “Certaines choses changent, et d'autres ne changeront jamais.”
 Créer un algorithme qui parcourt cette string en remplaçant le premier caractère par le
 deuxième, le deuxième par le troisième etc.. et le dernier par le premier.
 Ex. : Ertaines choses changent, et d'autres ne changeront jamais.c
-Rendu
-Le projet est à rendre sur https://github.com/prenom-nom/runtrack2.
-Dossiers “jourXX” -> “jobXX”. Fichiers nommés index.php
-Pensez à donner les droits sur le répertoire à deepthoughtlaplateforme ! -->
+-->
 
 
 <?php
@@ -34,7 +32,7 @@ for ($i = 1; $i < $strSize; $i++) {
 // ... puis on place le premier à la fin de la chaîne
 $strModified[$strSize-1] = $str[0];
 
-// La chaîne est maintenant décalée vers la gauche, avec l'ancien premier caractère à la fin !
+// La string est maintenant décalée vers la gauche, avec l'ancien premier caractère à la fin !
 
 // Pour toutes les lettres de l'alphabet
 for ($i = 0; $i < 26; $i++) {
