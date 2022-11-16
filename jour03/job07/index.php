@@ -26,12 +26,15 @@ while (isset($str[$strSize])) {
     $strSize += 1;
 }
 
-// On commence à 1 pour ne pas prendre en compte le premier caractère
+// On commence à 1 pour ne pas prendre en compte le premier caractère...
 for ($i = 1; $i < $strSize; $i++) {
     $strModified .= $str[$i];
 }
 
+// ... puis on place le premier à la fin de la chaîne
 $strModified[$strSize-1] = $str[0];
+
+// La chaîne est maintenant décalée vers la gauche !
 
 // Pour toutes les lettres de l'alphabet
 for ($i = 0; $i < 26; $i++) {
