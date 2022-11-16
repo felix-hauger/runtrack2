@@ -25,21 +25,24 @@ $i = 0;
 
 while (isset($str[$i])) {
     $char = $str[$i];
+    // va servir à savoir si on a besoin de chercher parmi les consonnes, au cas où il n'y a pas de match parmi les voyelles
     $isNotDefined = true;
 
+    // S'il y a un match, on ajoute +1 au compte des voyelles, on passe $isNotDefined à false pour ne pas lancer la boucle suivante et on break
     foreach($voyelles as $voyelle) {
-        if ($str[$i] === $voyelle) {
+        if ($char === $voyelle) {
             $dic['voyelles'] += 1;
             $isNotDefined = false;
             break;
         }
     }
     
+    //  S'il n'y a pas eu de match pour les voyelles, on boucle
     if ($isNotDefined) {
+        // S'il y a un match, on ajoute +1 au compte des consonnes et on break
         foreach($consonnes as $consonne) {
-            if ($str[$i] === $consonne) {
+            if ($char === $consonne) {
                 $dic['consonnes'] += 1;
-                $isNotDefined = false;
                 break;
             }
         }
