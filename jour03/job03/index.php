@@ -11,7 +11,7 @@ $i = 0;
 while (isset($str[$i])) {
     $char = $str[$i];
 
-    for ($v = 0; $v < 11; $v++) {
+    for ($v = 0; $v < 12; $v++) {
         if ($char === $vowels[$v]) {
             $vowel_str .= $char;
             break;
