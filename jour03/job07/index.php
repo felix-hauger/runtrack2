@@ -31,11 +31,13 @@ for ($i = 1; $i < $strSize; $i++) {
 
 $strModified[$strSize-1] = $str[0];
 
-
+// Pour toutes les lettres de l'alphabet
 for ($i = 0; $i < 26; $i++) {
+    // On swap le premier caractère par sa majuscule...
     if ($strModified[0] === $lower[$i]) {
         $strModified[0] = $upper[$i];
     }
+    // ... puis le dernier par sa minuscule
     if ($strModified[$strSize-1] === $upper[$i]) {
         $strModified[$strSize-1] = $lower[$i];
     }
