@@ -16,7 +16,7 @@ Pensez à donner les droits sur le répertoire à deepthoughtlaplateforme ! -->
 $lower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 $upper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'O', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
-$str = "Certaines choses changent, et d'autres ne changeront jamaiS.";
+$str = "Certaines choses changent, et d'autres ne changeront jamais.";
 $strModified = '';
 
 $strSize = 0;
