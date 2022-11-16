@@ -16,7 +16,7 @@ Pensez à donner les droits sur le répertoire à deepthoughtlaplateforme ! -->
 $lower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 $upper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'O', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
-$str = "Certaines choses changent, et d'autres ne changeront jamais.";
+$str = "Certaines choses changent, et d'autres ne changeront jamaiS.";
 $strModified = '';
 
 $strSize = 0;
@@ -43,8 +43,8 @@ for ($i = 0; $i < 26; $i++) {
         $strModified[0] = $upper[$i];
     }
     // ... puis le dernier par sa minuscule
-    if ($strModified[$strSize-1] === $upper[$i]) {
-        $strModified[$strSize-1] = $lower[$i];
+    if ($strModified[-1] === $upper[$i]) {
+        $strModified[-1] = $lower[$i];
     }
 }
 
