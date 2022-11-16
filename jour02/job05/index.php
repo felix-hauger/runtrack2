@@ -5,7 +5,7 @@ for ($i = 1; $i <= 1000; $i++) {
     // On commence à 2 car 1 n'est pas un nombre premier
     $j = 2;
 
-    // On fait un 2ème tour de boucle pour compter de 2 au nombre et vérifier s'il y a des multiples
+    // On fait un 2ème tour de boucle pour compter de 2 au nombre-1 et vérifier s'il y a des multiples entre 1 et le nombre
     while ($j <= $i-1) {
 
         // On teste si le nombre est un multiple du 2ème avec modulo, si oui ce n'est pas un nombre premier et on sort de la boucle
