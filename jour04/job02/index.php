@@ -1,4 +1,3 @@
-
 <style>
     table, th, td {
         border: 1px solid black;
@@ -37,8 +36,5 @@ if (empty($_GET["lastname"]) || empty($_GET["firstname"]) || empty($_GET["occupa
     
     echo $table . '</tbody>';
 }
-
-
-
 
 ?>
