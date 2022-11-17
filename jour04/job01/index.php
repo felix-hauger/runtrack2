@@ -1,7 +1,5 @@
 <?php
 
-var_dump($_GET);
-
 $count = 0;
 
 foreach($_GET as $input) {
@@ -17,8 +15,13 @@ echo 'Le nombre d’argument GET envoyé est : ' . $count;
     <label for="mytext">Mon texte</label>
     <input type="text" id="mytext" name="mytext">
 
-    <!-- <label for="mytext2">Mon texte 2</label>
-    <input type="text" id="mytext2" name="mytext2"> -->
+    <label for="mytext2">Mon texte 2</label>
+    <input type="text" id="mytext2" name="mytext2">
+
+    <label for="myprettytext">Mon joli texte</label>
+    <input type="text" id="myprettytext" name="myprettytext">
+
+
 
     <input type="submit" value="Envoyer">
 </form>
