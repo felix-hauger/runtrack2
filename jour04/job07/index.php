@@ -37,8 +37,8 @@ for ($remplissage = $nb_width; $remplissage >= 0 ; $remplissage -= 2) {
 
     for ($i=0; $i < $remplissage; $i++) {
         
-        // remplace le 1er caract-re par \
-        $char = ($i == ($remplissage - 1)) ? "\\" : "X";
+        // remplace le 1er caractère par \
+        $char = ($i == ($remplissage - 1)) ? "\\" : "_";
 
         // Remplace le dernier caractère par \
         if ($i == 0) {
@@ -70,7 +70,6 @@ for ($remplissage = $nb_width; $remplissage >= 0 ; $remplissage -= 2) {
 
 // dessine le triangle à l'aide du tableau
 foreach($liste_de_ligne as $ligne) {
-    // echo $ligne;
     $triangle = $ligne . '<br>' . $triangle;
 }
 
@@ -88,7 +87,7 @@ for ($i = 0; $i < $nb_height; $i++) {
 
             // Si ce n'est pas la base du rectangle, ajouter un espace
             if ($i !== $nb_height-1) {
-                $rectangle .= 'x';
+                $rectangle .= '&nbsp;';
 
             // Sinon ajouter des underscores pour la base
             } else {
