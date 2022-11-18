@@ -30,12 +30,17 @@ $liste_de_ligne = [];
 $index_liste = 0;
 $espace = "";
 
+
+// Va servir à créer la surface du triangle
 for ($remplissage = $nb_width; $remplissage >= 0 ; $remplissage -= 2) {
 
 
     for ($i=0; $i < $remplissage; $i++) {
+        
+        // remplace le 1er caract-re par \
         $char = ($i == ($remplissage - 1)) ? "\\" : "X";
 
+        // Remplace le dernier caractère par \
         if ($i == 0) {
             $char = "/";
         }
@@ -43,7 +48,7 @@ for ($remplissage = $nb_width; $remplissage >= 0 ; $remplissage -= 2) {
         $ligne .= $char;
     }
 
-
+    // ajoute la ligne créée ci-dessus au tableau $liste_de_lignes
     $liste_de_ligne[$index_liste] = $espace . $ligne;
 
 
@@ -63,7 +68,7 @@ for ($remplissage = $nb_width; $remplissage >= 0 ; $remplissage -= 2) {
 print_r($liste_de_ligne);
 
 
-
+// dessine le triangle à l'aide du tableau
 foreach($liste_de_ligne as $ligne) {
     echo $ligne;
     $triangle = $ligne . '<br>' . $triangle;
