@@ -65,12 +65,12 @@ for ($remplissage = $nb_width; $remplissage >= 0 ; $remplissage -= 2) {
 }
 
 
-print_r($liste_de_ligne);
+// print_r($liste_de_ligne);
 
 
 // dessine le triangle à l'aide du tableau
 foreach($liste_de_ligne as $ligne) {
-    echo $ligne;
+    // echo $ligne;
     $triangle = $ligne . '<br>' . $triangle;
 }
 
