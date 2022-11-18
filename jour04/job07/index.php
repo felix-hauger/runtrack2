@@ -16,20 +16,10 @@
 $nb_width = 40;
 $nb_height = 15;
 
+
+// --------------- TRIANGLE ---------------
+
 $triangle = '';
-
-
-
-// for ($j = $nb_width/2; $j > 1; $j--) {
-//     $left_spaces = 'y' . $left_spaces ;
-// }
-
-/*
-$dic = [
-    "interieur" => [],
-    "espace" => []
-];
-*/
 
 
 $ligne = "";
@@ -70,8 +60,6 @@ for ($remplissage = $nb_width; $remplissage >= 0 ; $remplissage -= 2) {
 
     echo "espace => --$espace--<br>";
     
-
-    // echo "ir => $ir & espace => $espace";
 }
 
 
@@ -84,53 +72,6 @@ foreach($liste_de_ligne as $ligne) {
     $triangle = $ligne . '<br>' . $triangle;
 }
 
-
-// for ($c = 0; $c < $index_liste; $c++) {
-//     $li = $liste_de_ligne[$c];
-
-//     echo "c => $c &     index_liste - 2 => " . ($index_liste - 1) . "<br>";
-
-//     if ($c === ($index_liste - 1)) {
-//         echo "love";
-//         $triangle = $ligne .  $triangle;
-//     } else {
-//         $triangle = $ligne . '<br>' . $triangle;
-//     }
-// }
-
-
-
-// for ($i = 1; $i < $nb_width; $i++) {
-//     // var_dump($left_side);
-//     $k = $nb_height - $i;
-//     echo "k : $k <br>";
-//     for ($j = $k; $j > 0; $j--) {
-//         // var_dump($j);
-//         echo "j : $j <br>";
-//         // $left_spaces = ($k-$j);
-//         // var_dump($left_spaces);
-//         $left_side = 'x' . $left_side;
-//     }
-//     $triangle .= $left_side.'<br>';
-//     if ($i % 2 === 0) {
-        
-
-        
-//         // $left_side .= $left_spaces . '<br>';
-//     }
-    
-//     if ($i > 1) {
-//         if ($i !== $nb_width-1) {
-//             $triangle_width .= '_';
-//         } else {
-//             $triangle_width .= '\\';
-//         } 
-//     } else {
-//         $triangle_width = '/' . $triangle_width;
-//     }
-//     // $triangle .= le
-
-// }
 
 // --------- RECTANGLE -----------
 
