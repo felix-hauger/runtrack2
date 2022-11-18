@@ -31,9 +31,6 @@ $index_liste = 0;
 $espace = "";
 
 for ($remplissage = $nb_width; $remplissage >= 0 ; $remplissage -= 2) {
-    
-    // $dic["remplissage"] = $num;
-    // $dic["espace"] += 1;
 
 
     for ($i=0; $i < $remplissage; $i++) {
@@ -58,7 +55,7 @@ for ($remplissage = $nb_width; $remplissage >= 0 ; $remplissage -= 2) {
 
 
 
-    echo "espace => --$espace--<br>";
+    // echo "espace => --$espace--<br>";
     
 }
 
@@ -99,8 +96,7 @@ for ($i = 0; $i < $nb_height; $i++) {
         }
     }
     $rectangle .= '<br>';
-    // $rectangle = $rectangle_width;
-    // var_dump($rectangle);
+
 }
 
 
