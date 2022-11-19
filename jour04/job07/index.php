@@ -38,11 +38,11 @@ if (!isset($_GET['height']) || $_GET['height'] === '' || !isset($_GET['width']) 
     $triangle = '';
 
 
-    $lign = '';
+    $line = '';
 
-    $lign_list = [];
+    $line_list = [];
 
-    // Va servir à ajouter les lignes du triangle au tableau $lign_list, dans l'ordre
+    // Va servir à ajouter les lignes du triangle au tableau $line_list, dans l'ordre
     $list_index = 0;
 
     $spaces = "";
@@ -57,32 +57,26 @@ if (!isset($_GET['height']) || $_GET['height'] === '' || !isset($_GET['width']) 
             // Ternaire : les côtés seront / & \ et le reste sera _
             $char = ($i == ($surface - 1)) ? "\\" : (($i == 0) ? $char = "/" : "_");
 
-            $lign .= $char;
+            $line .= $char;
         }
 
-        // ajoute la ligne créée ci-dessus au tableau $lign_lists
-        $lign_list[$list_index] = $spaces . $lign;
+        // Ajoute la ligne créée ci-dessus au tableau $line_list
+        $line_list[$list_index] = $spaces . $line;
 
-        // On reset la variable $lign pour le tour suivant
-        $lign = "";
+        // On reset la variable $line pour le tour suivant
+        $line = "";
 
 
         $list_index += 1;
         $spaces .= "&nbsp;";
 
-
-
-        // echo "spaces => --$spaces--<br>";
         
     }
 
 
-    // print_r($lign_list);
-
-
     // dessine le triangle à l'aide du tableau
-    foreach($lign_list as $lign) {
-        $triangle = $lign . '<br>' . $triangle;
+    foreach($line_list as $line) {
+        $triangle = $line . '<br>' . $triangle;
     }
 
 
