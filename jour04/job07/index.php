@@ -10,11 +10,25 @@
     }
 </style>
 
+<form action="" method="get">
+    <label for="height"></label>
+    <input type="number" name="height" id="height">
+    
+    <label for="width"></label>
+    <input type="number" name="width" id="width">
+
+    <input type="submit" value="Bâtissez votre maison!">
+</form>
 
 <?php
 
-$nb_width = 40;
-$nb_height = 12;
+// if (!isset($_GET['height']) && !isset($_GET['width'])) {
+//     echo 'Remplissez tous les champs !';
+// } else {
+
+// }
+$nb_width = $_GET['width'];
+$nb_height = $_GET['height'];
 
 
 // --------------- TRIANGLE ---------------
@@ -105,4 +119,6 @@ for ($i = 0; $i < $nb_height; $i++) {
 <div id="container">
     <?php echo '<pre>' . $triangle . $rectangle . '</pre>'; ?>
 </div>
+
+
 
