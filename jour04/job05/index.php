@@ -1,5 +1,7 @@
 <?php
 
+// Bien entendu, on utilise POST pour ne pas afficher des informations sensibles telles qu'un mot de passe dans l'url
+
 echo '<form action="" method="post">
 <label for="username">Utilisateur</label>
 <input type="text" name="username" id="username">
@@ -10,14 +12,11 @@ echo '<form action="" method="post">
 <input type="submit" value="Connexion">
 </form>';
 
-if (empty($_POST["username"]) || empty($_POST["password"])) {
-    echo 'Remplissez tous les champs !';
+// Vérifie si toutes les variables sont envoyées et avec les identifiants corrects. Sinon...
+if (!isset($_POST["username"]) || $_POST["username"] !== 'John' || !isset($_POST["password"]) || $_POST["password"] !== 'Rambo') {
+    echo 'Votre pire cauchemar';
 } else {
-    if ($_POST["username"] !== "John" || $_POST["password"] !== "Rambo") {
-        echo 'Votre pire cauchemar';
-    } else {
-        echo 'C\'est pas ma guerre';
-    }
+    echo 'C\'est pas ma guerre';
 }
 
 ?>
