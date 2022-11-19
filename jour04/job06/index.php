@@ -8,7 +8,7 @@ echo '<form action="" method="get">
 <input type="submit" value="Pair ou Impair ?">
 </form>';
 
-if (empty($_GET["oddeven"])) {
+if (!isset($_GET["oddeven"]) || $_GET["oddeven"] == '') {
     echo 'Remplissez tous les champs';
 } else {
     $number = $_GET["oddeven"];

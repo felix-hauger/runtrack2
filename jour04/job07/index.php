@@ -24,7 +24,7 @@ echo '<form action="" method="get">
 </form>
 ';
 
-if (!isset($_GET['height']) || $_GET['height'] === '' || !isset($_GET['width']) || $_GET['width'] === '') {
+if (!isset($_GET['height']) || $_GET['height'] == '' || !isset($_GET['width']) || $_GET['width'] == '') {
     echo 'Remplissez tous les champs !';
 } else {
 
