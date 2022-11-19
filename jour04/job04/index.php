@@ -24,7 +24,10 @@
  
 <?php
 
-if (empty($_POST["day"]) || empty($_POST["month"]) || empty($_POST["year"])) {
+// Vérifie si toutes les variables sont envoyées et non vides
+if (!isset($_POST["day"]) || !isset($_POST["month"]) || !isset($_POST["year"]) || 
+    $_POST["day"] == '' || $_POST["month"] == '' || $_POST["year"] == '') {
+
     echo 'Remplissez tous les champs !';
 } else {
     $table = '<table><thead><tr><th>Argument</th><th>Valeur</th></tr><tbody>';
