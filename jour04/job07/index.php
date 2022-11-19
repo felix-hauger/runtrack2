@@ -13,8 +13,8 @@
 
 <?php
 
-$nb_width = 40;
-$nb_height = 15;
+$nb_width = 20;
+$nb_height = 12;
 
 
 // --------------- TRIANGLE ---------------
@@ -22,7 +22,7 @@ $nb_height = 15;
 $triangle = '';
 
 
-$ligne = "";
+$ligne = '';
 
 $liste_de_ligne = [];
 
@@ -31,19 +31,14 @@ $index_liste = 0;
 $espace = "";
 
 
-// Va servir à créer la surface du triangle
+// Va servir à créer la surface du triangle, on part de la base et on enlève 1 de chaque côté, donc -2
 for ($remplissage = $nb_width; $remplissage >= 0 ; $remplissage -= 2) {
 
 
     for ($i=0; $i < $remplissage; $i++) {
         
-        // remplace le 1er caractère par \
-        $char = ($i == ($remplissage - 1)) ? "\\" : "_";
-
-        // Remplace le dernier caractère par \
-        if ($i == 0) {
-            $char = "/";
-        }
+        // Ternaire : les côtés seront / & \ et le reste sera _
+        $char = ($i == ($remplissage - 1)) ? "\\" : (($i == 0) ? $char = "/" : "_");
 
         $ligne .= $char;
     }
