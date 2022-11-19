@@ -16,8 +16,9 @@ echo '<form action="index.php" method="post">
         <input type="submit" value="Envoyer">
         </form>';
 
-        
-if (empty($_POST["mytext"]) || empty($_POST["mytext2"]) || empty($_POST["myprettytext"]) || empty($_POST["tototext"])) {
+// Vérifie si toutes les variables sont envoyées et non vides
+if (!isset($_POST["mytext"]) || !isset($_POST["mytext2"]) || !isset($_POST["myprettytext"]) || !isset($_POST["tototext"]) ||
+    $_POST["mytext"] == '' || $_POST["mytext2"] == '' || $_POST["myprettytext"] == '' || $_POST["tototext"] == '') {
     echo 'Remplissez tous les champs !';
 } else {
     $count = 0;
