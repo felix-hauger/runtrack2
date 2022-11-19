@@ -25,7 +25,9 @@
 
 <?php
 
-if (empty($_GET["lastname"]) || empty($_GET["firstname"]) || empty($_GET["occupation"])) {
+// Vérifie si toutes les variables sont envoyées et non vides
+if (!isset($_GET["lastname"]) || !isset($_GET["firstname"]) || !isset($_GET["occupation"]) ||
+    $_GET["lastname"] == '' || $_GET["firstname"] == '' || $_GET["occupation"] == '') {
     echo 'Remplissez tous les champs !';
 } else {
     $table = '<table><thead><tr><th>Argument</th><th>Valeur</th></tr><tbody>';
