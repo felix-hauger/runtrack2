@@ -13,8 +13,9 @@ echo '<form action="index.php" method="get">
 <input type="submit" value="Envoyer">
 </form>';
 
-
-if (empty($_GET["mytext"]) || empty($_GET["mytext2"]) || empty($_GET["myprettytext"])) {
+// Vérifie si toutes les variables sont envoyées et non vides
+if (!isset($_GET["mytext"]) || !isset($_GET["mytext2"]) || !isset($_GET["myprettytext"]) ||
+    $_GET["mytext"] == '' || $_GET["mytext2"] == '' || $_GET["myprettytext"] == '') {
     echo 'Remplissez tous les champs !';
 } else {
     $count = 0;
