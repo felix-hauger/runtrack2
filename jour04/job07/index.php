@@ -5,8 +5,7 @@
         box-sizing: border-box;
     }
     #container {
-        margin-left: 300px;
-        margin-top: 300px;
+        margin: 100px;
     }
 </style>
 
@@ -14,10 +13,10 @@
 <?php
 
 echo '<form action="" method="get">
-<label for="height"></label>
+<label for="height">Hauteur</label>
 <input type="number" name="height" id="height">
 
-<label for="width"></label>
+<label for="width">Largeur</label>
 <input type="number" name="width" id="width">
 
 <input type="submit" value="Bâtissez votre maison!">
