@@ -15,7 +15,7 @@ while (isset($str[$strSize])) {
 }
 
 // Parcourt la string à l'envers
-for ($i = $strSize; $i >= 0; $i--) {
+for ($i = $strSize-1; $i >= 0; $i--) {
     echo $str[$i];
 }
 
