@@ -1,9 +1,15 @@
 # Cours PHP
 
+# Jour02
+
+Optionnel :
+    job05 : optimisation racine carrée
+
+
 # Jour03
 
 Optionnel :
-    job06 : optionnel, enlever les accents
+    job06 : enlever les accents
 
 # Jour04
 
@@ -13,7 +19,7 @@ Optionnel :
 
 # Jour06
 
-Exercices à refaire : 
+Exercices à refaire / réviser : 
     02-05, 
     03-04,
     04-07
