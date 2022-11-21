@@ -1,5 +1,8 @@
 <?php
 
+// Faire un algorithme qui affiche les nombres premiers jusqu’à 1000 en mettant un retour
+// à la ligne entre chaque nombre (“<br />”).
+
 for ($i = 1; $i <= 1000; $i++) {
     
     // On commence à 2 car 1 n'est pas un nombre premier
