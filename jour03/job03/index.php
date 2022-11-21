@@ -12,11 +12,13 @@ $vowel_str = '';
 
 $i = 0;
 
-
+// Tant qu'il y a des caractères dans la string
 while (isset($str[$i])) {
     $char = $str[$i];
 
+    // Si le caractère correspond à une voyelle, on l'ajoute dans la string $vowel_str
     for ($v = 0; $v < 12; $v++) {
+        
         if ($char === $vowels[$v]) {
             $vowel_str .= $char;
             break;
