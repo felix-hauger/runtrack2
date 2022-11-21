@@ -1,3 +1,15 @@
+<!-- Développer un algorithme qui affiche dans un tableau HTML <table> l’ensemble des
+arguments $_GET et les valeurs associées.
+Il doit y avoir deux colonnes : argument et valeur.
+Tips :
+Pour tester votre code, créez un formulaire html <form> de type GET avec différents
+champs <input> de type “text” et un <input> de type “submit” pour l’envoi.
+Vous pouvez ensuite afficher avec echo directement dans votre page par exemple ce
+tableau :
+Argument Valeur
+prenom   Stephane
+nom      Dupont -->
+
 <style>
     table, th, td {
         border: 1px solid black;
