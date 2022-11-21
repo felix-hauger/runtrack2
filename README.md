@@ -1,5 +1,9 @@
 # Cours PHP
 
+# Jour03
+
+Optionnel :
+    job06 : optionnel, enlever les accents
 
 # Jour04
 
@@ -13,6 +17,3 @@ Exercices à refaire :
     02-05, 
     03-04,
     04-07
-
-03-06 : optionnel, enlever les accents
-
