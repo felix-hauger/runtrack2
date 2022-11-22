@@ -32,6 +32,18 @@
 
 <?php 
 
+$allInputsFilled = false;
+
+foreach ($_POST as $input) {
+    var_dump($input);
+    if (!isset($input) || $input == '') {
+        echo 'Remplissez tous les champs !';
+        break;
+    } else {
+        $allInputsFilled = true;
+    }
+}
+
 function gras($str) {
     $low_to_up = ['a' => 'A', 'b' => 'B', 'c' => 'C', 'd' => 'D', 'e' => 'E', 'f' => 'F', 'g' => 'G', 'h' => 'H', 'i' => 'I', 'j' => 'J', 'k' => 'K', 'l' => 'L', 'm' => 'M', 'o' => 'O', 'n' => 'N', 'p' => 'P', 'q' => 'Q', 'r' => 'R', 's' => 'S', 't' => 'T', 'u' => 'U', 'v' => 'V', 'w' => 'W', 'x' => 'X', 'y' => 'Y', 'z' => 'Z'];
 
