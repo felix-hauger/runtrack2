@@ -15,18 +15,18 @@
 
 function leetSpeak($str) {
     $leetArray = [
-        'A' => '4',
-        'B' => '8',
-        'E' => '3',
-        'G' => '6',
-        'L' => '1',
-        'S' => '5',
-        'T' => '7'
+        '4' => ['a', 'A'],
+        '8' => ['b', 'B'],
+        '3' => ['e', 'E'],
+        '6' => ['g', 'G'],
+        '1' => ['l', 'L'],
+        '5' => ['s', 'S'],
+        '7' => ['t', 'T']
     ];
 
     for ($i = 0; isset($str[$i]); $i++) {
-        foreach ($leetArray as $char => $leet) {
-            if ($str[$i] === $char) {
+        foreach ($leetArray as $leet => $char) {
+            if ($str[$i] === $char[0] || $str[$i] === $char[1]) {
                 $str[$i] = $leet;
             }
         }
@@ -36,4 +36,6 @@ function leetSpeak($str) {
 }
 
 
-echo leetSpeak('TATA BELGE');
+echo leetSpeak('TATA BELGE') . '<br />';
+echo leetSpeak('Tata Belge') . '<br />';
+echo leetSpeak('Anticonstitutionnellement') . '<br />';
