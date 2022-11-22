@@ -44,5 +44,5 @@ function leetSpeak($str) {
 
 
 echo leetSpeak('TATA BELGE') . '<br />';
-echo leetSpeak('tata Belge') . '<br />';
+echo leetSpeak('tata belge') . '<br />';
 echo leetSpeak('Anticonstitutionnellement') . '<br />';
