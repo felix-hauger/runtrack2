@@ -44,6 +44,8 @@ foreach ($_POST as $input) {
     }
 }
 
+echo '<br>';
+
 function gras($str) {
     $low_to_up = ['a' => 'A', 'b' => 'B', 'c' => 'C', 'd' => 'D', 'e' => 'E', 'f' => 'F', 'g' => 'G', 'h' => 'H', 'i' => 'I', 'j' => 'J', 'k' => 'K', 'l' => 'L', 'm' => 'M', 'o' => 'O', 'n' => 'N', 'p' => 'P', 'q' => 'Q', 'r' => 'R', 's' => 'S', 't' => 'T', 'u' => 'U', 'v' => 'V', 'w' => 'W', 'x' => 'X', 'y' => 'Y', 'z' => 'Z'];
 
@@ -63,9 +65,22 @@ function cesar($str) {
 
 }
 
+echo '<br>';
+
 function plateforme($str) {
+    $strSize = 0;
+    while (isset($str[$strSize])) {
+        $strSize++;
+    }
+
+    if ($str[$strSize-2] === 'm' && $str[$strSize-1] === 'e') {
+        $str .= '_';
+    }
+
+    return $str;
 
 }
 
+echo plateforme('centime');
 
 ?>
