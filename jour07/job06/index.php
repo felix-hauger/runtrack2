@@ -14,6 +14,8 @@
 // Cela est valable que l’on crie ou non (majuscules et minuscules).
 
 function leetSpeak($str) {
+
+    // array de correspondance entre un leet et tableau de caractères
     $leetArray = [
         '4' => ['a', 'A'],
         '8' => ['b', 'B'],
@@ -24,8 +26,13 @@ function leetSpeak($str) {
         '7' => ['t', 'T']
     ];
 
+    // Pour chaque caractère de la chaîne
     for ($i = 0; isset($str[$i]); $i++) {
+
+        // Pour chaque clé de $leetArray qui vaut un leet qui vaut le tableau [min, maj]
         foreach ($leetArray as $leet => $char) {
+            
+            // S'il vaut la min ou la maj on swap avec le leet
             if ($str[$i] === $char[0] || $str[$i] === $char[1]) {
                 $str[$i] = $leet;
             }
