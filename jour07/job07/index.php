@@ -17,34 +17,6 @@
 //     ● “plateforme”, une fonction qui prend en paramètre “$str” : plateforme($str).
 //     Elle affiche “$str” en ajoutant un “_” aux mots finissant par “me”.
 
-?>
-
-<!-- <form action="" method="post">
-    <label for="str">Entrez votre texte</label>
-    <input type="text" name="str" id="str">
-    <select name="fonction" id="fonction">
-        <option value="gras">Gras</option>
-        <option value="cesar">Cesar</option>
-        <option value="plateforme">Plateforme</option>
-    </select>
-    <button type="submit">Envoyez</button>
-</form> -->
-
-<?php 
-
-// $allInputsFilled = false;
-
-// foreach ($_POST as $input) {
-//     var_dump($input);
-//     if (!isset($input) || $input == '') {
-//         echo 'Remplissez tous les champs !';
-//         break;
-//     } else {
-//         $allInputsFilled = true;
-//     }
-// }
-
-echo '<br>';
 
 function getStringLength($str) {
     $strSize = 0;
@@ -56,7 +28,7 @@ function getStringLength($str) {
     return $strSize;
 }
 
-echo getStringLength('toto caca') . '<br />';
+// echo getStringLength('toto caca') . '<br />';
 
 function splitString($str, $separator = ' ') {
     $string = '';
@@ -76,7 +48,7 @@ function splitString($str, $separator = ' ') {
     return $stringArray;
 }
 
-var_dump(splitString('toto caca sqdqsdxcw dze       '));
+// var_dump(splitString('toto caca sqdqsdxcw dze       '));
 
 //     ● “gras” : une fonction qui prend en paramètre “str” : gras($str). Elle écrit “str” en
 //     mettant en gras (<b>) les mots commençant par une lettre majuscule.
@@ -86,7 +58,7 @@ function gras($str) {
     $newStr = '';
     $capitals = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'O', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     $strArray = splitString($str);
-    var_dump($strArray);
+    // var_dump($strArray);
     foreach($strArray as $s) {
 
         foreach($capitals as $c) {
@@ -104,9 +76,9 @@ function gras($str) {
     return $newStr;
 }
 
-echo '<pre>' . gras('toto  Toto dsqd   lola') . '</pre>';
+// echo '<pre>' . gras('toto  Toto dsqd   lola') . '</pre>';
 
-echo '<br>';
+// echo '<br>';
 
 //     ● “cesar” : une fonction qui prend en paramètre “$str” et un nombre “$decalage”
 //     (qui vaut 2 par défaut) : cesar($str, $decalage). $str doit s’afficher en décalant
@@ -139,7 +111,7 @@ echo cesar('vwxy z') . '<br />';
 echo cesar('ABCdsq dDE', 1) . '<br />';
 echo cesar('VWX dsqd YZ', 8) . '<br />';
 
-echo '<br>';
+// echo '<br>';
 
 //     ● “plateforme”, une fonction qui prend en paramètre “$str” : plateforme($str).
 //     Elle affiche “$str” en ajoutant un “_” aux mots finissant par “me”.
@@ -170,6 +142,68 @@ function plateforme($str) {
 
 }
 
-echo '<pre>' . plateforme('centime e meme    tome wololo me m e  f') . '</pre>';
+// echo '<pre>' . plateforme('centime e meme    tome wololo me m e  f') . '</pre>';
 
 ?>
+
+ <!-- Créez un formulaire <form> qui contient :
+     ● un champ <input> nommé “str” de type “text”,
+     ● une liste déroulante <select> nommée “fonction”
+     ● un bouton <button> submit.
+     Lorsque vous validez le formulaire, vous devez appliquer des transformations à “str” en
+     fonction de l’option <option> choisie dans la liste déroulante. -->
+
+<form action="" method="post">
+    <label for="str">Entrez votre texte</label>
+    <input type="text" name="str" id="str">
+    <select name="fonction" id="fonction">
+        <option value="gras">Gras</option>
+        <option value="cesar">Cesar</option>
+        <option value="plateforme">Plateforme</option>
+    </select>
+    <label for="decalage">Décalage</label>
+    <input type="number" name="decalage" id="decalage" placeholder="2">
+    <button type="submit">Envoyez</button>
+</form>
+
+<?php 
+
+// $allInputsFilled = false;
+
+// foreach ($_POST as $input) {
+//     if (!isset($input) || $input == '') {
+//         echo 'Remplissez tous les champs !';
+//         $allInputsFilled = false;
+//         break;
+//     } else {
+//         $allInputsFilled = true;
+//     }
+// }
+
+// if ($allInputsFilled) {
+
+// }
+
+if (!isset($_POST['str']) && $_POST['str'] == '') {
+    echo 'Remplissez le champ de texte !';
+
+} else {
+    $str = $_POST['str'];
+    switch($_POST['fonction']) {
+        case 'gras':
+            echo gras($str);
+            break;
+        case 'cesar':
+            if ($_POST['decalage']) {
+                echo cesar($str, $_POST['decalage']);
+            } else {
+                echo cesar($str);
+            }
+            break;
+        case 'plateforme':
+            echo plateforme($str);
+            break;
+        default:
+            echo $str;
+    }    
+}
