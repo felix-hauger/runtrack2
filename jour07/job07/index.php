@@ -61,7 +61,6 @@ echo getStringLength('toto caca') . '<br />';
 function splitString($str, $separator = ' ') {
     $string = '';
     $stringArray = [];
-    // $strSize = getStringLength($str);
     for ($i = 0; isset($str[$i]); $i++) {
         if ($str[$i] === $separator) {
             $stringArray[] = $string;
@@ -131,10 +130,7 @@ echo cesar('VWX dsqd YZ', 8) . '<br />';
 echo '<br>';
 
 function plateforme($str) {
-    $strSize = 0;
-    while (isset($str[$strSize])) {
-        $strSize++;
-    }
+    $strSize  = getStringLength($str);
 
     if ($str[$strSize-2] === 'm' && $str[$strSize-1] === 'e') {
         $str .= '_';
