@@ -19,7 +19,7 @@
 
 ?>
 
-<form action="" method="post">
+<!-- <form action="" method="post">
     <label for="str">Entrez votre texte</label>
     <input type="text" name="str" id="str">
     <select name="fonction" id="fonction">
@@ -28,24 +28,33 @@
         <option value="plateforme">Plateforme</option>
     </select>
     <button type="submit">Envoyez</button>
-</form>
+</form> -->
 
 <?php 
 
-$allInputsFilled = false;
+// $allInputsFilled = false;
 
-foreach ($_POST as $input) {
-    var_dump($input);
-    if (!isset($input) || $input == '') {
-        echo 'Remplissez tous les champs !';
-        break;
-    } else {
-        $allInputsFilled = true;
-    }
-}
+// foreach ($_POST as $input) {
+//     var_dump($input);
+//     if (!isset($input) || $input == '') {
+//         echo 'Remplissez tous les champs !';
+//         break;
+//     } else {
+//         $allInputsFilled = true;
+//     }
+// }
 
 echo '<br>';
 
+function splitString($str) {
+    for ($i = 0; isset($str[$i]); $i++) {
+
+    }
+}
+
+
+//     ● “gras” : une fonction qui prend en paramètre “str” : gras($str). Elle écrit “str” en
+//     mettant en gras (<b>) les mots commençant par une lettre majuscule.
 function gras($str) {
     $low_to_up = ['a' => 'A', 'b' => 'B', 'c' => 'C', 'd' => 'D', 'e' => 'E', 'f' => 'F', 'g' => 'G', 'h' => 'H', 'i' => 'I', 'j' => 'J', 'k' => 'K', 'l' => 'L', 'm' => 'M', 'o' => 'O', 'n' => 'N', 'p' => 'P', 'q' => 'Q', 'r' => 'R', 's' => 'S', 't' => 'T', 'u' => 'U', 'v' => 'V', 'w' => 'W', 'x' => 'X', 'y' => 'Y', 'z' => 'Z'];
 
@@ -60,10 +69,38 @@ function gras($str) {
 
 echo gras('toto');
 
+echo '<br>';
 
-function cesar($str) {
+//     ● “cesar” : une fonction qui prend en paramètre “$str” et un nombre “$decalage”
+//     (qui vaut 2 par défaut) : cesar($str, $decalage). $str doit s’afficher en décalant
+//     chaque caractère d’un nombre égal à “$decalage”.
+//     ex : Si $decalage vaut 1 alors “e” devient “f”. Si décalage vaut 3 alors “z” devient
+//     “c”.
 
+function cesar($str, $decalage = 2) {
+    $lower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    $upper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'O', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    
+    for ($i = 0; isset($str[$i]); $i++) {
+        for ($j = 0; $j < 26; $j++) {
+            if ($str[$i] === $lower[$j]) {
+                // Le modulo 26 permet de revenir au début de l'alphabet
+                $str[$i] = $lower[($j + $decalage) % 26];
+                break;
+            } else if ($str[$i] === $upper[$j]) {
+                $str[$i] = $upper[($j + $decalage) % 26];
+                break;
+            }
+        }
+    }
+
+    return $str;
 }
+
+echo cesar('abcde') . '<br />';
+echo cesar('vwxy z') . '<br />';
+echo cesar('ABCdsq dDE', 1) . '<br />';
+echo cesar('VWX dsqd YZ', 8) . '<br />';
 
 echo '<br>';
 
