@@ -13,13 +13,9 @@ function bonjour($jour) {
     }
 }
 
-$jour = true;
-
-bonjour($jour);
+bonjour(true);
 
 echo '<br />';
 
-$jour = false;
-
-bonjour($jour);
+bonjour(false);
 
