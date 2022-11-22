@@ -29,7 +29,7 @@ function leetSpeak($str) {
     // Pour chaque caractère de la chaîne
     for ($i = 0; isset($str[$i]); $i++) {
 
-        // Pour chaque clé de $leetArray qui vaut un leet qui vaut le tableau [min, maj]
+        // Pour chaque clé de $leetArray qui vaut un leet qui correspond au tableau [min, maj]
         foreach ($leetArray as $leet => $char) {
             
             // S'il vaut la min ou la maj on swap avec le leet
@@ -44,5 +44,5 @@ function leetSpeak($str) {
 
 
 echo leetSpeak('TATA BELGE') . '<br />';
-echo leetSpeak('Tata Belge') . '<br />';
+echo leetSpeak('tata Belge') . '<br />';
 echo leetSpeak('Anticonstitutionnellement') . '<br />';
