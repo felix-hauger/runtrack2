@@ -155,8 +155,8 @@ function plateforme($str) {
         // On récupère la taille avec la fonction créée plus tôt...
         $strSize = getStringLength($string);
         
-        // ...pour vérifier si la string fait bien au moins 2 caractères...
-        if ($strSize >= 2) {
+        // ...pour vérifier si la string n'est pas vide pour qu'on puisse récupérer son index
+        if ($string !== '') {
             // ...et si elle se termine par me
             if ($string[$strSize-2] === 'm' && $string[$strSize-1] === 'e') {
                 $string .= '_';
@@ -170,6 +170,6 @@ function plateforme($str) {
 
 }
 
-echo plateforme('centime e meme    tome wololo me m e  ');
+echo '<pre>' . plateforme('centime e meme    tome wololo me m e  f') . '</pre>';
 
 ?>
