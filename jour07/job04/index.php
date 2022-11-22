@@ -23,14 +23,12 @@ function calcule($a, $operation, $b) {
 }
 
 $num1 = 42;
-$num2 = 7;
+$num2 = 5;
+$operateurs = ['+', '-', '*', '/', '%'];
 
-echo 'premier nombre : ' . $num1;
-echo 'second nombre : ' . $num2;
+echo 'premier nombre : ' . $num1 . '<br />';
+echo 'second nombre : ' . $num2 . '<br />';
 
-
-echo $num1 . ' + ' . $num2 . ' : ' . calcule($num1, '+', $num2) . '<br />';
-echo $num1 . ' - ' . $num2 . ' : ' . calcule($num1, '-', $num2) . '<br />';
-echo $num1 . ' * ' . $num2 . ' : ' . calcule($num1, '*', $num2) . '<br />';
-echo $num1 . ' / ' . $num2 . ' : ' . calcule($num1, '/', $num2) . '<br />';
-echo $num1 . ' % ' . $num2 . ' : ' . calcule($num1, '%', $num2) . '<br />';
+for ($i = 0; isset($operateurs[$i]); $i++) {
+    echo $num1 . ' ' . $operateurs[$i] . ' ' . $num2 . ' : ' . calcule($num1, $operateurs[$i], $num2) . '<br />';
+}
