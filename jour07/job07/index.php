@@ -134,11 +134,18 @@ echo '<br>';
 
 function plateforme($str) {
     $newStr = '';
+    // fonction qui va séparer une string en un array, par défaut le séparateur est un espace ' '
     $strArray = splitString($str);
-    
+
+    // pour chaque string de l'array
     foreach ($strArray as $string) {
+
+        // On récupère la taille avec la fonction créée plus tôt...
         $strSize = getStringLength($string);
+        
+        // ...pour vérifier si la string fait bien au moins 2 caractères...
         if ($strSize >= 2) {
+            // ...et si elle se termine par me
             if ($string[$strSize-2] === 'm' && $string[$strSize-1] === 'e') {
                 $string .= '_';
             }
@@ -151,6 +158,6 @@ function plateforme($str) {
 
 }
 
-echo plateforme('centime e meme tome wololo');
+echo plateforme('centime e meme    tome wololo me m e  ');
 
 ?>
