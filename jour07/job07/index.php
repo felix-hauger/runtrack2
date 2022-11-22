@@ -28,7 +28,6 @@ function getStringLength($str) {
     return $strSize;
 }
 
-// echo getStringLength('toto caca') . '<br />';
 
 function splitString($str, $separator = ' ') {
     $string = '';
@@ -40,15 +39,13 @@ function splitString($str, $separator = ' ') {
         } else {
             $string .= $str[$i];
         }
-        // var_dump($string);
-        // var_dump($stringArray);
+
     }
     $stringArray[] = $string;
 
     return $stringArray;
 }
 
-// var_dump(splitString('toto caca sqdqsdxcw dze       '));
 
 //     ● “gras” : une fonction qui prend en paramètre “str” : gras($str). Elle écrit “str” en
 //     mettant en gras (<b>) les mots commençant par une lettre majuscule.
@@ -58,7 +55,7 @@ function gras($str) {
     $newStr = '';
     $capitals = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'O', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     $strArray = splitString($str);
-    // var_dump($strArray);
+
     foreach($strArray as $s) {
 
         foreach($capitals as $c) {
@@ -76,9 +73,6 @@ function gras($str) {
     return $newStr;
 }
 
-// echo '<pre>' . gras('toto  Toto dsqd   lola') . '</pre>';
-
-// echo '<br>';
 
 //     ● “cesar” : une fonction qui prend en paramètre “$str” et un nombre “$decalage”
 //     (qui vaut 2 par défaut) : cesar($str, $decalage). $str doit s’afficher en décalant
@@ -106,12 +100,6 @@ function cesar($str, $decalage = 2) {
     return $str;
 }
 
-echo cesar('abcde') . '<br />';
-echo cesar('vwxy z') . '<br />';
-echo cesar('ABCdsq dDE', 1) . '<br />';
-echo cesar('VWX dsqd YZ', 8) . '<br />';
-
-// echo '<br>';
 
 //     ● “plateforme”, une fonction qui prend en paramètre “$str” : plateforme($str).
 //     Elle affiche “$str” en ajoutant un “_” aux mots finissant par “me”.
@@ -142,7 +130,6 @@ function plateforme($str) {
 
 }
 
-// echo '<pre>' . plateforme('centime e meme    tome wololo me m e  f') . '</pre>';
 
 ?>
 
