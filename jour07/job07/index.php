@@ -68,8 +68,8 @@ function splitString($str, $separator = ' ') {
         } else {
             $string .= $str[$i];
         }
-        var_dump($string);
-        var_dump($stringArray);
+        // var_dump($string);
+        // var_dump($stringArray);
     }
     $stringArray[] = $string;
 
@@ -129,17 +129,28 @@ echo cesar('VWX dsqd YZ', 8) . '<br />';
 
 echo '<br>';
 
-function plateforme($str) {
-    $strSize  = getStringLength($str);
+//     ● “plateforme”, une fonction qui prend en paramètre “$str” : plateforme($str).
+//     Elle affiche “$str” en ajoutant un “_” aux mots finissant par “me”.
 
-    if ($str[$strSize-2] === 'm' && $str[$strSize-1] === 'e') {
-        $str .= '_';
+function plateforme($str) {
+    $newStr = '';
+    $strArray = splitString($str);
+    
+    foreach ($strArray as $string) {
+        $strSize = getStringLength($string);
+        if ($strSize >= 2) {
+            if ($string[$strSize-2] === 'm' && $string[$strSize-1] === 'e') {
+                $string .= '_';
+            }
+        }
+        $newStr .= $string . ' ';
+
     }
 
-    return $str;
+    return $newStr;
 
 }
 
-echo plateforme('centime');
+echo plateforme('centime e meme tome wololo');
 
 ?>
