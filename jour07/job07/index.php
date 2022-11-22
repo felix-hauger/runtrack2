@@ -46,12 +46,38 @@
 
 echo '<br>';
 
-function splitString($str) {
-    for ($i = 0; isset($str[$i]); $i++) {
-
+function getStringLength($str) {
+    $strSize = 0;
+    
+    while (isset($str[$strSize])) {
+        $strSize++;
     }
+
+    return $strSize;
 }
 
+echo getStringLength('toto caca') . '<br />';
+
+function splitString($str, $separator = ' ') {
+    $string = '';
+    $stringArray = [];
+    // $strSize = getStringLength($str);
+    for ($i = 0; isset($str[$i]); $i++) {
+        if ($str[$i] === $separator) {
+            $stringArray[] = $string;
+            $string = '';
+        } else {
+            $string .= $str[$i];
+        }
+        var_dump($string);
+        var_dump($stringArray);
+    }
+    $stringArray[] = $string;
+
+    return $stringArray;
+}
+
+var_dump(splitString('toto caca sqdqsdxcw dze       '));
 
 //     ● “gras” : une fonction qui prend en paramètre “str” : gras($str). Elle écrit “str” en
 //     mettant en gras (<b>) les mots commençant par une lettre majuscule.
