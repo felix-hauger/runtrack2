@@ -66,7 +66,7 @@ function gras($str) {
                 }
             }
         }
-        $newStr .= $s . ' ';
+        $newStr .= $s . '&nbsp';
 
     }
 
@@ -122,7 +122,7 @@ function plateforme($str) {
                 $string .= '_';
             }
         }
-        $newStr .= $string . ' ';
+        $newStr .= $string . '&nbsp';
 
     }
 
