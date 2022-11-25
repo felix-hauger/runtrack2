@@ -19,7 +19,11 @@ Optionnel :
 
 # Jour06
 
-Exercices à refaire / réviser : 
+Jobs à refaire / réviser : 
     02-05, 
     03-04,
     04-07
+
+# Jour09
+
+Job09 - rendre la date dynamique ET PRÉCISE : DATE(NOW()) ? DATEDIFF ? INTERVAL ?

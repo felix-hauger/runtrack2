@@ -1,0 +1,1 @@
+SELECT * FROM `etudiants` WHERE DATEDIFF(DATE( NOW()), naissance) > 6574;
