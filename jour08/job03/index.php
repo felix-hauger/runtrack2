@@ -7,8 +7,12 @@
 
 session_start();
 
+// POUR GÉRER LA VARIABLE DE SESSION CONTENANT LES PRÉNOMS...
+
+// On gère d'abord le cas de reset pour vider la liste des prénoms...
 if (isset($_POST['reset'])) {
     $_SESSION['firstnames'] = [];
+// ...sinon si l'input a envoyé une string non vide on l'ajoute à la liste
 } elseif (isset($_POST['firstname']) && $_POST['firstname'] != '') {
     $_SESSION['firstnames'][] = $_POST['firstname'];
 }
@@ -24,6 +28,8 @@ if (isset($_POST['reset'])) {
 
 <?php 
 
+
+// ... ET POUR L'AFFICHER
 echo '<ul>';
 if (isset($_SESSION['firstnames'])) {
     foreach ($_SESSION['firstnames'] as $firstname) {
