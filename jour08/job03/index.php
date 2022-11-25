@@ -30,12 +30,12 @@ if (isset($_POST['reset'])) {
 
 
 // ... ET POUR L'AFFICHER
-echo '<ul>';
 if (isset($_SESSION['firstnames'])) {
+    echo '<ul>';
     foreach ($_SESSION['firstnames'] as $firstname) {
         echo '<li>' . $firstname . '</li>';
     }
+    echo '</ul>';
 }
-echo '</ul>';
 
 ?>
