@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `etage`
+-- Structure de la table `etages`
 --
 
-CREATE TABLE `etage` (
+CREATE TABLE `etages` (
   `id` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `numero` int(11) NOT NULL,
@@ -35,10 +35,10 @@ CREATE TABLE `etage` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `etage`
+-- Déchargement des données de la table `etages`
 --
 
-INSERT INTO `etage` (`id`, `nom`, `numero`, `superficie`) VALUES
+INSERT INTO `etages` (`id`, `nom`, `numero`, `superficie`) VALUES
 (1, 'RDC', 0, 500),
 (2, 'R+1', 1, 500);
 
@@ -100,9 +100,9 @@ INSERT INTO `salles` (`id`, `nom`, `id_etage`, `capacite`) VALUES
 --
 
 --
--- Index pour la table `etage`
+-- Index pour la table `etages`
 --
-ALTER TABLE `etage`
+ALTER TABLE `etages`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -122,9 +122,9 @@ ALTER TABLE `salles`
 --
 
 --
--- AUTO_INCREMENT pour la table `etage`
+-- AUTO_INCREMENT pour la table `etages`
 --
-ALTER TABLE `etage`
+ALTER TABLE `etages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --

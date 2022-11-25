@@ -1,1 +1,1 @@
-SELECT SUM(superficie) FROM etage;
+SELECT SUM(superficie) FROM etages;
