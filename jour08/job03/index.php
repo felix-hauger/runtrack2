@@ -22,8 +22,8 @@ if (isset($_POST['reset'])) {
 <form action="" method="post">
     <label for="firstname">first name</label>
     <input type="text" name="firstname" id="firstname">
+    
     <button type="submit" name="submit">submit</button>
-    <!-- <input type="submit" name="submit" value="submit"> -->
 
     <button type="submit" name="reset">reset</button>
 </form>
