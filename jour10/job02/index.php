@@ -6,6 +6,7 @@ $query = mysqli_query($id, 'select nom, capacite from salles');
 
 $row = $query->fetch_assoc();
 
+
 echo '<table><thead><tr>';
 
 foreach ($row as $key => $value) {

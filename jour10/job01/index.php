@@ -6,8 +6,8 @@ $query = mysqli_query($id, 'select prenom, nom, naissance, sexe, email from etud
 
 $row = $query->fetch_assoc();
 
-echo '<table><thead><tr>';
 
+echo '<table><thead><tr>';
 
 foreach ($row as $key => $value) {
     echo '<th>' . $key . '</th>';
@@ -15,13 +15,15 @@ foreach ($row as $key => $value) {
 
 echo '</tr></thead><tbody>';
 
-
 while ($row != null) {
     echo '<tr>';
+
     foreach ($row as $value) {
         echo '<td>' . $value . '</td>';
     }
+
     echo '</tr>';
+    
     $row = $query->fetch_assoc();
 }
 

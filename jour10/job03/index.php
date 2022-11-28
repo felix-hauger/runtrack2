@@ -22,7 +22,7 @@ while ($row != null) {
         echo '<td>' . $value . '</td>';
     }
 
-    echo '<tr>';
+    echo '</tr>';
 
     $row = $query->fetch_assoc();
 }
