@@ -11,13 +11,9 @@ $row = $query->fetch_assoc();
 <table>
     <thead>
         <tr>
-            <?php
-            foreach ($row as $key => $value):
-            ?>
-                <th><?= $key ?></th>
-            <?php
-            endforeach;
-            ?>
+        <?php foreach ($row as $key => $value): ?>
+            <th><?= $key ?></th>
+        <?php endforeach; ?>
         </tr>
     </thead>
     <tbody>
