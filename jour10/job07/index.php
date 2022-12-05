@@ -11,7 +11,7 @@ $row = $query->fetch_all();
 <table>
     <thead>
         <tr>
-            <th>Superficie totale</th>
+            <th>Superficie totale des étages</th>
         </tr>
     </thead>
     <tbody>
