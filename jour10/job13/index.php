@@ -21,7 +21,7 @@ $row = $query->fetch_assoc();
         <tr>
         <?php foreach ($row as $value): ?>
             <td><?= $value ?></td>
-        <?php endforeach; var_dump($row); $row = $query->fetch_assoc(); ?>
+        <?php endforeach; $row = $query->fetch_assoc(); ?>
         </tr>
     <?php endwhile; ?>
     </tbody>
